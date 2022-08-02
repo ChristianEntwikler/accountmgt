@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:p="http://primefaces.org/ui"
+          xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+
+          lang="en" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+      
+      
+    <h:head>
+        <title>Account Management</title>
+        
+        <f:facet name="first">
+                    <meta http-equiv="X-UA-Compatible" content="IE=8, IE=9, chrome=1, IE=Edge"/>
+                    <meta charset="UTF-8"/>
+                    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0" />
+                    <title>Account Management System</title>
+                    
+                    <h:outputStylesheet library="primefaces" name="primefaces.css"/>                   
+                   <h:outputScript library="js" name="jquery.min.js" />
+
+                </f:facet>
+        
+    </h:head>
+    
+    <style type="text/css">
+              
+            .ui-panelgrid tr, .ui-panelgrid td
+            {
+            border:1px groove #f1f1f1 !important;
+            }
+            
+            .dataTable
+            {
+             background: linear-gradient(90deg, #2c2752, #02402d);
+             border:1px groove #7bc3f3;
+            }
+            
+            .dataTables_paginate
+            {
+             background: linear-gradient(90deg, #2c2752, #02402d);
+             border:1px groove #7bc3f3;
+            }
+            
+            .dataTables_empty
+            {
+             background: linear-gradient(90deg, #2c2752, #02402d);
+             border:1px groove #7bc3f3;
+            }
+            
+            .ui-datatable thead th {
+            background-image: none !important;
+            background: linear-gradient(90deg, #2c2752, #02402d);
+            color: #000000 !important;
+            } 
+            
+            .ui-panel-titlebar .ui-datatable thead th {
+            background-image: none !important;
+            background: linear-gradient(90deg, #2c2752, #02402d);
+            color: #000000 !important;
+            }
+            
+            .ui-panel-titlebar .ui-datatable thead {
+            background-image: none !important;
+            background: linear-gradient(90deg, #2c2752, #02402d);
+            color: #000000 !important;
+            }
+                        
+            .ui-custompanelgrid, .ui-custompanelgrid td {
+            font-weight: bold;
+            background-color: blue !important;
+            }
+            
+            .ui-panel-titlebar
+            {
+            background: linear-gradient(90deg, #2c2752, #02402d);
+            border: 0px solid #ffffff;
+            }
+            
+            .ui-selectmenu-menu
+            {
+             background-color:#02402d;   
+            }
+            .panel-heading
+            {
+                background-color:#02402d;
+            }
+            
+            .panel-collapse
+            {
+                background-color:#02402d;
+            }
+            
+            .ui-fileupload
+            {
+                background-color:#02402d;
+                font-size: 10pt;
+            }
+            
+            .fileupload-buttonbar {
+                background: transparent none;
+                border: none;
+                font-size: 10pt;
+            }
+
+            .fileupload-content {
+                display: none;
+                font-size: 10pt;
+                
+            }
+
+            .ui-fileupload .fileinput-button {
+                background-color:#02402d;
+                font-weight:normal;
+                font-size: 10pt;
+                border: 0px solid #ffffff;
+            }
+            
+            .ui-fileupload-buttonbar .ui-fileupload-choose {
+                background-color:#02402d;
+                font-weight:normal;
+                font-size: 10pt;
+                border: 0px solid #ffffff;
+            }
+            
+            .ui-button-text-icon-left .ui-button-text {        
+                font-weight:normal;
+                color:#ffffff;
+              }
+              
+              .ui-datatable .ui-datatable-header {
+                
+            }
+            
+            .ui-datatable .ui-paginator {
+                background: linear-gradient(90deg, #2c2752, #02402d);
+                border: 0px solid #ffffff;
+            }
+            
+            
+            .ui-calendar
+            {
+             /*background: linear-gradient(90deg, #2c2752, #02402d);*/
+             background-color: transparent;
+             border:1px groove #2c2752;
+             font-size:8pt;
+             color:#2c2752;
+             text-decoration: none;
+            }
+            
+            .hasDatepicker
+            {
+             /*background: linear-gradient(90deg, #2c2752, #02402d);*/
+             background-color: transparent;
+             border:1px groove #2c2752;
+             font-size:8pt;
+             text-decoration: none;
+            }
+            .ui-inputfield
+            {
+             width:100%;
+             padding:2%;
+             /*background: linear-gradient(90deg, #2c2752, #02402d);*/
+             background-color: rgba(255,255,255,0.3);
+             border:1px groove #2c2752;
+             font-size:8pt;
+             color:#000;
+             font-weight:bold;
+             text-decoration: none;
+             box-shadow: none;
+            }
+            
+            .ui-inputfield:hover
+            {
+             box-shadow: none;
+            }
+            .ui-widget
+            {
+             font-size:8pt;
+             color:#000;
+             text-decoration: none;
+            } 
+            .ui-state-default
+            {
+             border:0px groove #2c2752;
+             font-size:8pt;
+             text-decoration: none;
+            }
+            .ui-corner-all
+            {
+             border:1px groove #2c2752;
+             font-size:8pt;
+            }    
+            
+            .ui-panelgrid.showcase-text-align-center .ui-grid-responsive .ui-panelgrid-cell {
+            border-color: transparent;
+            }
+
+            .customPanelGrid .ui-panelgrid-content {
+                border-color: transparent;
+            }
+
+              
+              </style>
+    
+    <body>
+        <h:form id ="frmpnl">
+        <div class="card">
+    <h5>Account Management</h5>
+        <p:panel style="width:20%; border-color: transparent; float:left;">
+            <p:fieldset legend="Menu" style="padding:2%;">
+        <button type="button" id="genacct" onclick="showhide('ACCOUNTS')" style="background: linear-gradient(90deg, #42b0f5, #5442f5); color:#ffffff;" >
+       Create Account
+        </button>
+        <br/><br/>
+        
+        <button type="button" id="dep" onclick="showhide('TNSD')" style="background: linear-gradient(90deg, #42b0f5, #5442f5); color:#ffffff;">
+        Deposit
+        </button><br/><br/>
+        
+        <button type="button" id="wit" onclick="showhide('TNSW')" style="background: linear-gradient(90deg, #42b0f5, #5442f5); color:#ffffff;">
+        Withdraw
+        </button><br/><br/>
+        
+        <button type="button" id="tns" onclick="showhide('REPORTS')" style="background: linear-gradient(90deg, #42b0f5, #5442f5); color:#ffffff;">
+        Transactions
+        </button>
+        
+            </p:fieldset>
+        </p:panel>
+        <p:panel id ="viewpnl" style="width:75%; border-color: transparent; float:left; ">
+            <p:fieldset legend="View" style="padding:2%;">
+                <p:messages id="acctval" />
+                <!-- ACCOUNT CREATION START HERE -->
+                <div id="acctfrmdiv" style="display:none;">
+                <p:panelGrid id="acctfrm" columns="2" style="border-color:transparent;" layout="tabular">
+                   <p>Name: </p>
+                   <h:inputText id="acctname" class='form-control' value="#{accountManagementController.acct.accountName}" pt:placeholder='Enter name' style="padding-bottom:0%; margin-bottom:2%;" />
+                   
+                    <p>Phone Number: </p>
+                    <h:inputText id="acctphone" class='form-control' value="#{accountManagementController.acct.phone}" pt:placeholder='Enter phone number' style="padding-bottom:0%; margin-bottom:2%;" />
+
+                    <p></p>
+                    <p:commandButton value="Create Account" style="background: linear-gradient(90deg, #42b0f5, #5442f5); color:#ffffff;" actionListener="#{accountManagementController.createAccount}" update="acctname acctphone acctpane" class="btn btn-light px-5" /> 
+                    
+                    <p>Generate Multiple Accounts</p>
+                    <p:commandButton value="Generate Account" style="background: linear-gradient(90deg, #42b0f5, #5442f5); color:#ffffff;" actionListener="#{accountManagementController.generateAccount}" update="acctname acctphone acctpane" class="btn btn-light px-5" /> 
+
+               </p:panelGrid>
+                    </div>
+                
+                <div id="acctpanediv" style="display:none;">
+                <p:scrollPanel id="acctpane" mode="native" style="width:100%;height:250px; border: 0px;float: left; margin-left:0%;">                       
+                    <hr/>       
+                           <div class="">                 
+                               <p:dataTable emptyMessage="No item available" binding="#{table}" id="requests" var="myrequest" value="#{accountManagementController.listAccounts()}" >                     
+                                 <p:column headerText="S/No" width="100">
+                                    #{table.rowIndex + 1}
+                                </p:column>
+                                   
+                                   <p:column headerText="Account No" width="100">
+                                       <p:outputLabel value="#{myrequest.accountNumber}" /><br/>
+                                 </p:column>  
+                                   
+                                 <p:column headerText="Account Name" width="100">
+                                     <p:outputLabel value="#{myrequest.accountName}" /><br/>
+                                 </p:column>  
+                                   
+                                 <p:column headerText="Phone Number" width="100">
+                                     <p:outputLabel value="#{myrequest.phone}" /><br/>
+                                 </p:column>  
+                                                                      
+                                 <p:column headerText="Date" width="100">
+                                     <p:outputLabel value="#{myrequest.createdAt}" /><br/>
+                                 </p:column>  
+                                                                      
+                             </p:dataTable>   
+                               
+                               
+                               
+                            </div>
+                           
+                           
+                       </p:scrollPanel>
+                </div>
+          <!-- ACCOUNT CREATION STOP HERE -->      
+                
+                <!-- TRANSACTION START HERE -->
+               
+                <div id="tnsfrmdiv" style="display:none;">
+                <p:panelGrid id="tnsfrm" columns="2" style="border-color:transparent;" layout="tabular">
+                   <p>Account Number: </p>
+                   <p:inputText class='form-control' id="acctno" onkeyup="$(this).val($(this).val().replace(/[^0-9]/g, ''));" maxlength="10"  value="#{transactionController.tns.accountNumber}" pt:placeholder='Enter Account Number' style="padding-bottom:0%; margin-bottom:2%;" >
+                   </p:inputText>
+                   
+                    <p>Amount: </p>
+                    <p:inputNumber class='form-control' id="acctamt" decimalPlaces="2" value="#{transactionController.tns.amount}" pt:placeholder='Enter Amount' style="padding-bottom:0%; margin-bottom:2%;" />
+                    
+                     <p id="deptxt" value="" ></p>
+                     
+                         <p:commandButton id="depcmd" value="Deposit" style="background: linear-gradient(90deg, #42b0f5, #5442f5); color:#ffffff;" actionListener="#{transactionController.doTransactiond()}" update="acctno acctamt tnspane" /> 
+                    
+                    
+                </p:panelGrid>
+                </div>
+                
+                <div id="tnsfrmwdiv" style="display:none;">
+                <p:panelGrid id="tnsfrmw" columns="2" style="border-color:transparent;" layout="tabular">
+                   <p>Account Number: </p>
+                   <p:inputText class='form-control' id="acctnow" onkeyup="$(this).val($(this).val().replace(/[^0-9]/g, ''));" maxlength="10"  value="#{transactionController.tnsw.accountNumber}" pt:placeholder='Enter Account Number' style="padding-bottom:0%; margin-bottom:2%;" >
+                   </p:inputText>
+                   
+                    <p>Amount: </p>
+                    <p:inputNumber class='form-control' id="acctamtw" decimalPlaces="2" value="#{transactionController.tnsw.amount}" pt:placeholder='Enter Amount' style="padding-bottom:0%; margin-bottom:2%;" />
+                     
+                    <p id="wittxt" value="" ></p>
+                    
+                        <p:commandButton id="witcmd" value="Withdraw" style="background: linear-gradient(90deg, #42b0f5, #5442f5); color:#ffffff;" actionListener="#{transactionController.doTransactionw}" update="acctnow acctamtw tnspane" /> 
+                    
+                    
+                </p:panelGrid>
+                </div>
+                
+                   
+                
+          <!-- TRANSACTION STOP HERE -->      
+                
+                
+               <!-- TRANSACTION REPORT START HERE -->
+               <div id="searchfrmdiv" style="display:none;">
+               <p:panelGrid columns="3" id="searchfrm" style="border-color:transparent;" layout="tabular" >
+                   <p class="mb-0 text-white small-font">Search Data</p>
+    <h:inputText class='form-control' value="#{transactionController.searchData}" pt:placeholder='Enter search data' style="padding-bottom:0%; margin-bottom:2%;" />
+    <p:commandButton icon="fa fa-fw fa-search" value="Search" style="background: linear-gradient(90deg, #42b0f5, #5442f5); color:#ffffff;" actionListener="#{transactionController.listTransactions(transactionController.searchData)}" update="tnspane" class="btn btn-light px-5" /> 
+               
+               </p:panelGrid>
+               </div>
+             
+               <div id="tnspanediv" style="display:none;">
+               <p:scrollPanel id="tnspane" mode="native" style="width:100%;height:250px; border: 0px;float: left; margin-left:0%;">                       
+                    <hr/>       
+                           <div class="">                 
+                               <p:dataTable emptyMessage="No item available" binding="#{table2}" id="requests2" var="myrequest" value="#{transactionController.listTns}" >                     
+                                 <p:column headerText="S/No" width="100">
+                                    #{table2.rowIndex + 1}
+                                </p:column>
+                                   
+                                   <p:column headerText="Reference" width="100">
+                                       <p:outputLabel value="#{myrequest.reference}" /><br/>
+                                 </p:column>  
+                                   
+                                 <p:column headerText="Account No" width="100">
+                                     <p:outputLabel value="#{myrequest.accountNumber}" /><br/>
+                                 </p:column>  
+                                   
+                                 <p:column headerText="Transaction Type" width="100">
+                                     <p:outputLabel value="#{myrequest.transactionType}" /><br/>
+                                 </p:column>  
+                                   
+                                 <p:column headerText="Amount" width="100">
+                                     <p:outputLabel value="#{myrequest.amount}" /><br/>
+                                 </p:column> 
+                                   
+                                 <p:column headerText="Balance" width="100">
+                                     <p:outputLabel value="#{myrequest.balance}" /><br/>
+                                 </p:column>  
+                                   
+                                 <p:column headerText="Date" width="100">
+                                     <p:outputLabel value="#{myrequest.createdAt}" /><br/>
+                                 </p:column>  
+                                                                      
+                             </p:dataTable>   
+                               
+                               
+                               
+                            </div>
+                           
+                           
+                       </p:scrollPanel>
+               </div>
+                   
+               <!-- TRANSACTION REPORT STOP HERE -->
+                
+            </p:fieldset>
+        </p:panel>
+        
+    
+</div>
+        
+            <p:ajaxStatus onstart="PF('status').show()" onsuccess="PF('status').hide()" oncomplete="PF('status').hide()" />
+                
+                <p:dialog widgetVar="status" modal="true" draggable="false" closable="false" resizable="false" showHeader="false" style="height:180px; border-radius: 50%; background: linear-gradient(180deg, rgba(181,216,235,0.7), rgba(232,249,252,0.7)); border:2px groove #1d82a4;">
+                    <p:graphicImage library="images"  name="loading4.gif" style="width:120px;height:120px;" />
+                </p:dialog> 
+                    
+        
+   <script>
+        
+        $('#genacct').click(function(){
+            $('#acctfrmdiv').show();
+            $('#acctpanediv').show();
+            $('#tnsfrmdiv').hide();
+            $('#tnsfrmwdiv').hide();
+            $('#tnspanediv').hide();
+            $('#searchfrmdiv').hide();           
+        });
+
+        $('#dep').click(function(){
+            $('#acctfrmdiv').hide();
+            $('#acctpanediv').hide();
+            $('#tnsfrmdiv').show();
+            $('#tnsfrmwdiv').hide();
+            $('#tnspanediv').show();
+            $('#searchfrmdiv').hide();
+        }); 
+
+         $('#wit').click(function(){
+            $('#acctfrmdiv').hide();
+            $('#acctpanediv').hide();
+            $('#tnsfrmdiv').hide();
+            $('#tnsfrmwdiv').show();
+            $('#tnspanediv').show();
+            $('#searchfrmdiv').hide();
+            
+        }); 
+
+        $('#tns').click(function(){
+            $('#acctfrmdiv').hide();
+            $('#acctpanediv').hide();
+            $('#tnsfrmdiv').hide();
+            $('#tnsfrmwdiv').hide();
+            $('#tnspanediv').show();
+            $('#searchfrmdiv').show();
+        });  
+     
+</script>
+            
+        </h:form>
+        
+    
+        
+    </body>
+</html>
+
